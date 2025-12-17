@@ -26,7 +26,8 @@ const config: Config = {
         "dark-glass-gradient": "linear-gradient(135deg, rgba(8, 19, 25, 0.7), rgba(19, 55, 72, 0.4))",
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['Orbitron', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        orbitron: ['Orbitron', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },

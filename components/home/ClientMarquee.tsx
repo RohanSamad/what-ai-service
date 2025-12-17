@@ -1,3 +1,66 @@
+// 'use client';
+
+// import { useEffect, useRef } from 'react';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// const clients = [
+//     'TechCorp', 'InnovateLabs', 'FutureScalers', 'GlobalConnect', 'RapidGrowth', 'AI-First', 'NexSys'
+// ];
+
+// export default function ClientMarquee() {
+//     const sectionRef = useRef<HTMLDivElement>(null);
+
+//     useEffect(() => {
+//         const ctx = gsap.context(() => {
+//             gsap.registerPlugin(ScrollTrigger);
+
+//             gsap.to('.gsap-reveal', {
+//                 scrollTrigger: {
+//                     trigger: sectionRef.current,
+//                     start: 'top 75%',
+//                     toggleActions: 'play none none reverse'
+//                 },
+//                 autoAlpha: 1,
+//                 y: 0,
+//                 duration: 1,
+//                 ease: 'power3.out'
+//             });
+//         }, sectionRef);
+
+//         return () => ctx.revert();
+//     }, []);
+
+//     return (
+//         <div ref={sectionRef} className="py-12 border-b border-white/5 bg-white/5 overflow-hidden relative">
+//             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-10" />
+//             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-10" />
+
+//             <div className="gsap-reveal translate-y-8 flex animate-scroll whitespace-nowrap">
+//                 {/* Double the list for seamless loop */}
+//                 {[...clients, ...clients, ...clients].map((client, i) => (
+//                     <div key={i} className="mx-8 md:mx-16 min-w-[120px] text-center opacity-40 hover:opacity-100 transition-opacity cursor-default">
+//                         <span className="text-xl md:text-2xl font-bold font-mono tracking-tighter text-steel-gray dark:text-gray-300">
+//                             {client}
+//                         </span>
+//                     </div>
+//                 ))}
+//             </div>
+
+//             <style jsx>{`
+//         .animate-scroll {
+//           animation: scroll 30s linear infinite;
+//         }
+//         @keyframes scroll {
+//           0% { transform: translateX(0); }
+//           100% { transform: translateX(-33.33%); }
+//         }
+//       `}</style>
+//         </div>
+//     );
+// }
+
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -5,57 +68,104 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const clients = [
-    'TechCorp', 'InnovateLabs', 'FutureScalers', 'GlobalConnect', 'RapidGrowth', 'AI-First', 'NexSys'
+  'TechCorp',
+  'InnovateLabs',
+  'FutureScalers',
+  'GlobalConnect',
+  'RapidGrowth',
+  'AI-First',
+  'NexSys',
+  'DataFlow',
 ];
 
 export default function ClientMarquee() {
-    const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
 
-            gsap.to('.gsap-reveal', {
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: 'top 75%',
-                    toggleActions: 'play none none reverse'
-                },
-                autoAlpha: 1,
-                y: 0,
-                duration: 1,
-                ease: 'power3.out'
-            });
-        }, sectionRef);
+      gsap.to('.gsap-reveal', {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 75%',
+          toggleActions: 'play none none reverse',
+        },
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+      });
+    }, sectionRef);
 
-        return () => ctx.revert();
-    }, []);
+    return () => ctx.revert();
+  }, []);
 
-    return (
-        <div ref={sectionRef} className="py-12 border-b border-white/5 bg-white/5 overflow-hidden relative">
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-10" />
+  return (
+    <div
+      ref={sectionRef}
+      className="relative py-12  border-purple-500/20 bg-slate-950/50 overflow-hidden"
+    >
+      {/* Hexagon Grid Background */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="client-hexagons"
+              x="0"
+              y="0"
+              width="60"
+              height="52"
+              patternUnits="userSpaceOnUse"
+            >
+              <polygon
+                points="30,0 60,17.3 60,52 30,69.3 0,52 0,17.3"
+                fill="none"
+                stroke="url(#hexGradient)"
+                strokeWidth="0.5"
+              />
+            </pattern>
+            <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="rgb(236, 72, 153)" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#client-hexagons)" />
+        </svg>
+      </div>
 
-            <div className="gsap-reveal translate-y-8 flex animate-scroll whitespace-nowrap">
-                {/* Double the list for seamless loop */}
-                {[...clients, ...clients, ...clients].map((client, i) => (
-                    <div key={i} className="mx-8 md:mx-16 min-w-[120px] text-center opacity-40 hover:opacity-100 transition-opacity cursor-default">
-                        <span className="text-xl md:text-2xl font-bold font-mono tracking-tighter text-steel-gray dark:text-gray-300">
-                            {client}
-                        </span>
-                    </div>
-                ))}
-            </div>
+      {/* Gradient Fade Edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
 
-            <style jsx>{`
+      {/* Marquee */}
+      <div className="gsap-reveal translate-y-8 flex animate-scroll whitespace-nowrap">
+        {[...clients, ...clients, ...clients].map((client, i) => (
+          <div
+            key={i}
+            className="mx-8 md:mx-16 min-w-[120px] text-center opacity-40 hover:opacity-100 transition-opacity cursor-default"
+          >
+            <span className="text-xl md:text-2xl font-bold font-mono tracking-tighter text-slate-300">
+              {client}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <style jsx>{`
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
         @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.33%);
+          }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }
