@@ -1,3 +1,4 @@
+import CEOMessage from '@/components/home/CEOMessage';
 import CEOPage from '@/components/pages/CEO'
 import type { Metadata } from "next";
 
@@ -10,6 +11,7 @@ const page = () => {
   return (
     <div>
       <CEOPage />
+      <CEOMessage/>
     </div>
   )
 }

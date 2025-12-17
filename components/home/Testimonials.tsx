@@ -42,7 +42,6 @@ const testimonials = [
 export default function Testimonials() {
   const sectionRef = useRef<HTMLElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -241,9 +240,9 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="testimonial-quote text-slate-200 text-base md:text-lg leading-relaxed">
+                    <p className="testimonial-quote text-slate-200 text-base md:text-lg leading-relaxed">
                       "{testimonial.quote}"
-                    </blockquote>
+                    </p>
 
                     {/* Divider */}
                     <div className={`h-1 w-16 bg-gradient-to-r ${testimonial.color} rounded-full`} />

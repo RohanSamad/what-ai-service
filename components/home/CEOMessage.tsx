@@ -101,7 +101,7 @@ export default function CEOMessage() {
               <div className="relative">
                 <div className="relative aspect-square max-w-md mx-auto">
                   {/* Image Frame */}
-                  <div className="relative rounded-3xl bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-[6px] shadow-2xl shadow-purple-500/30">
+                  <div className="relative rounded-3xl h-[380px] md:min-h-[500px] bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-[6px] shadow-2xl shadow-purple-500/30">
                     <div className="rounded-3xl bg-slate-900 overflow-hidden">
                       <div className="aspect-square flex items-center justify-center bg-slate-900">
                         <Image
@@ -154,7 +154,7 @@ export default function CEOMessage() {
               <div className="content-reveal space-y-4">
                 <div>
                   <div className="text-2xl font-bold text-white">
-                    Founder Name
+                    Chico Mills
                   </div>
                   <div className="text-lg text-purple-400">CEO & Founder</div>
                   <div className="text-sm text-slate-400">What AI Services</div>

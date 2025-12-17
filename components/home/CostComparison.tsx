@@ -115,9 +115,9 @@ export default function CostComparison() {
       if (counter) {
         gsap.fromTo(
           counter,
-          { textContent: 95000 },
+          { textContent: 0 },
           {
-            textContent: 0,
+            textContent: 95000,
             duration: 2,
             ease: 'power2.inOut',
             snap: { textContent: 1000 },
@@ -193,7 +193,6 @@ export default function CostComparison() {
         <div ref={barsRef} className="max-w-4xl mx-auto mb-20">
           <div className="space-y-4">
             {traditionalCosts.map((cost, index) => {
-              const percentage = (cost.amount / totalTraditional) * 100;
               return (
                 <div key={index} className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
@@ -295,7 +294,7 @@ export default function CostComparison() {
               ref={counterRef}
               className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
             >
-              $95,000
+              $0
             </div>
             <p className="text-slate-300 text-lg">Every Single Year</p>
             

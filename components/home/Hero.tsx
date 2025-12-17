@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from '@/lib/gsap';
 import CTAButton from '@/components/shared/CTAButton';
+import Link from 'next/link';
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -251,6 +252,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="gsap-reveal flex flex-wrap gap-4">
+              <Link href="/demo">
               <CTAButton
                 variant="primary"
                 size="lg"
@@ -259,6 +261,9 @@ export default function Hero() {
                 <span className="relative z-10">Book a Demo</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </CTAButton>
+              </Link>
+              <Link 
+              href="/ceo">
               <CTAButton
                 variant="secondary"
                 size="lg"
@@ -266,6 +271,8 @@ export default function Hero() {
               >
                 See How It Works →
               </CTAButton>
+              </Link>
+              
             </div>
 
             {/* Stats */}
