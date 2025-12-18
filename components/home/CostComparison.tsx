@@ -5,6 +5,7 @@ import { FiCheck, FiX, FiTrendingUp, FiTrendingDown, FiDollarSign } from 'react-
 import CTAButton from '@/components/shared/CTAButton';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 
 const traditionalCosts = [
   { label: 'Base Salary', amount: 60000 },
@@ -299,6 +300,7 @@ export default function CostComparison() {
             <p className="text-slate-300 text-lg">Every Single Year</p>
             
             <div className="pt-6">
+              <Link href="https://cal.com/chico-mills-bnnqzc/demo-call?overlayCalendar=true">
               <CTAButton
                 variant="primary"
                 size="lg"
@@ -312,6 +314,7 @@ export default function CostComparison() {
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </CTAButton>
+              </Link>
             </div>
           </div>
         </div>

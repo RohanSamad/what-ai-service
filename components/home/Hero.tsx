@@ -252,7 +252,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="gsap-reveal flex flex-wrap gap-4">
-              <Link href="/demo">
+              <Link target='blank' href="https://cal.com/chico-mills-bnnqzc/demo-call?overlayCalendar=true">
               <CTAButton
                 variant="primary"
                 size="lg"

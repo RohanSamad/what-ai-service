@@ -22,7 +22,7 @@ export default function StickyDemo() {
 
     return (
         <Link
-            href="/demo"
+            href="https://cal.com/chico-mills-bnnqzc/demo-call?overlayCalendar=true"
             className={`fixed bottom-8 right-8 z-40 flex items-center gap-2 px-6 py-3 rounded-full bg-neon-cyan text-white shadow-lg shadow-neon-cyan/40 transition-all duration-500 transform hover:scale-105 hover:shadow-neon-cyan/60 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
                 }`}
         >
