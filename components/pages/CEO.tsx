@@ -197,7 +197,7 @@ export default function CEOPage() {
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-white mb-1">
-                Chico Mills
+                Jeremy Mills
               </h3>
               <p className="text-purple-400 mb-3">CEO & Founder</p>
               <div className="flex items-center gap-3">

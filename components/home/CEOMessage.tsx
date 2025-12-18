@@ -154,7 +154,7 @@ export default function CEOMessage() {
               <div className="content-reveal space-y-4">
                 <div>
                   <div className="text-2xl font-bold text-white">
-                    Chico Mills
+                    Jeremy Mills
                   </div>
                   <div className="text-lg text-purple-400">CEO & Founder</div>
                   <div className="text-sm text-slate-400">What AI Services</div>

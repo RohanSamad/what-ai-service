@@ -217,7 +217,7 @@ export default function PainPoints() {
 
                 {/* Right: Content */}
                 <div className="pain-content flex-1 space-y-3">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white dark:text-white">
                     {point.title}
                   </h3>
                   <p className="text-slate-300 text-base md:text-lg leading-relaxed">
